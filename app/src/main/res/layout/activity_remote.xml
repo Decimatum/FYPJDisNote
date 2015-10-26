@@ -1,0 +1,274 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.example.l30605.fypjdisnote.Remote">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please connect or reconnect device to use features"
+        android:layout_centerInParent="true"
+        android:id="@+id/tvConnect"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LLSelect"
+        android:background="@color/SelectBack"
+        android:visibility="gone">
+
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/btnUp"
+            android:src="@drawable/arrowup"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/SelectBack"
+            />
+        //Button up
+
+
+        //Button select
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/btnSelect"
+            android:text="Select"
+            android:background="#8AD9D2"
+            android:layout_below="@+id/btnUp"
+            android:layout_centerHorizontal="true"/>
+
+        //Button down
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/btnDown"
+            android:layout_below="@+id/btnSelect"
+            android:src="@drawable/arrowdown"
+            android:layout_centerHorizontal="true"
+            android:background="@color/SelectBack"
+            />
+
+
+        //Button Left
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/btnLeft"
+            android:src="@drawable/arrowleft"
+            android:layout_toLeftOf="@+id/btnSelect"
+            android:layout_alignBottom="@+id/btnSelect"
+            android:background="@color/SelectBack"
+           />
+
+        //Button Right
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/btnRight"
+            android:layout_toRightOf="@+id/btnSelect"
+            android:src="@drawable/arrowright"
+            android:layout_alignBottom="@+id/btnSelect"
+            android:background="@color/SelectBack"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/toggleButtonLL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LLSelect"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Pointer : "/>
+        <Switch
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="ON"
+            android:textOff="OFF" />
+        <TextView
+            android:id="@+id/tvPointerColor"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:textSize="20dp"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"
+            android:background="@android:color/holo_red_light"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/motionToggleLL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButtonLL"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+       >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Motion Control : "
+            android:layout_marginLeft="60dp"/>
+        <Switch
+            android:id="@+id/motionToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="ON"
+            android:textOff="OFF"
+           />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@color/Grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlNote"
+        android:layout_below="@+id/motionToggleLL"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTitle"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDescription"
+            android:layout_below="@+id/tvTitle"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/bluey"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rlDock"
+        android:visibility="invisible"
+        >
+        <ImageButton
+            android:background="@color/bluey"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnRotateLeft"
+            android:src="@drawable/rotateleft"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
+        <ImageButton
+            android:background="@color/bluey"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnRotateRight"
+            android:layout_toRightOf="@id/btnRotateLeft"
+            android:src="@drawable/rotateright"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
+        <ImageButton
+            android:background="@color/bluey"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Edit Mode"
+            android:id="@+id/btnGrab"
+            android:layout_toRightOf="@id/btnRotateRight"
+            android:src="@drawable/grab"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Edit"
+            android:id="@+id/btnEdit"
+            android:layout_toRightOf="@+id/btnGrab"
+            android:background="@color/Greeny"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="75dp"-->
+        <!--android:background="@color/bluey"-->
+        <!--android:layout_alignParentBottom="true">-->
+
+        <!--<ImageButton-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:text="testing"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_margin="2.5dp"-->
+            <!--android:id="@+id/btnRollLeft"-->
+            <!--/>-->
+
+        <!--<ImageButton-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:text="testing"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_margin="2.5dp"-->
+            <!--android:layout_toRightOf="@+id/btnRollLeft"-->
+            <!--android:id="@+id/btnRollRight"/>-->
+
+        <!--<ImageButton-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:text="testing"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_margin="2.5dp"-->
+            <!--android:layout_toRightOf="@+id/btnRollRight"-->
+            <!--android:id="@+id/btnGrab" />-->
+
+        <!--<ImageButton-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:text="testing"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_margin="2.5dp"-->
+        <!--android:layout_toRightOf="@+id/btnRollRight"-->
+        <!--android:id="@+id/btn" />-->
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

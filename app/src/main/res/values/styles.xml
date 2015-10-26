@@ -1,0 +1,29 @@
+<resources>
+
+   <!-- &lt;!&ndash; Base application theme. &ndash;&gt;
+    <style parent="@style/_AppTheme" name="AppTheme"/>
+    <style name="_AppTheme" parent="android:Theme.Holo">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="android:actionBarStyle">@color/apptheme_color</item>
+    </style>-->
+
+    <!-- the theme applied to the application or activity -->
+
+
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/apptheme_color</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/MyTitleTextStyle</item>
+
+    </style>
+
+
+    <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Grey"
+    tools:context="com.example.l30605.fypjdisnote.home">
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/btnDiscussion"
+        android:background="@color/controlColor"
+        android:layout_margin="15dp"
+        android:src="@drawable/whiteboard"
+        />
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/btnRemote"
+        android:layout_margin="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/btnDiscussion"
+        android:background="@color/controlColor"
+        android:src="@drawable/wireless"
+        android:scaleType="fitCenter"
+        />
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/btnNote"
+        android:layout_margin="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/btnDiscussion"
+        android:background="@color/controlColor"
+        android:src="@drawable/note"
+        />
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/btnSetting"
+        android:layout_margin="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/btnNote"
+        android:layout_below="@+id/btnRemote"
+        android:background="@color/controlColor"
+        android:src="@drawable/settings"
+        />
+
+
+
+</RelativeLayout>

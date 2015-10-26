@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Grey">#5D5D5D</color>
+    <color name="apptheme_color">#33b5e5</color>
+    <color name="controlColor">#02B9D0</color>
+    <color name="SelectBack">#689ACA</color>
+    <color name="bluey">#6BCDFD</color>
+    <color name="Greeny">#08AE9E</color>
+    <color name="Red">#FF0000</color>
+
+    //Normal
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+    //Green Back
+    <color name="GreenBack">#4E9231</color>
+    <color name="GreenBackBack">#A8D892</color>
+    //Rust Gold
+    <color name="TextGold">#AA8239</color>
+    <color name="BackGold">#FFE1AA</color>
+</resources>

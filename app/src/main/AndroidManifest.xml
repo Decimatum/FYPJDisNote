@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.l30605.fypjdisnote" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".NoteApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/disnotelogo"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Remote"
+            android:label="@string/title_activity_remote"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DeviceListActivity"
+            android:label="Device List"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.l130605.fypjdisnote.DeviceListActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Whiteboard"
+            android:label="@string/title_activity_whiteboard"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.l130605.fypjdisnote.Whiteboard" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreateNote"
+            android:label="@string/title_activity_create_note"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.l130605.fypjdisnote.CreateNote" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Whiteboar2"
+            android:label="@string/title_activity_whiteboar2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EditActivity"
+            android:label="@string/title_activity_edit"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.l130605.fypjdisnote.EditActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".listofnotes"
+            android:label="@string/title_activity_listofnotes"
+            android:screenOrientation="portrait" >>
+        </activity>
+        <activity
+            android:name=".viewnote"
+            android:label="@string/title_activity_viewnote"
+            android:screenOrientation="portrait" >>
+        </activity>
+        <activity
+            android:name=".EditNote"
+            android:label="Edit Note"
+            android:screenOrientation="portrait" >>
+        </activity>
+    </application>
+
+</manifest>
