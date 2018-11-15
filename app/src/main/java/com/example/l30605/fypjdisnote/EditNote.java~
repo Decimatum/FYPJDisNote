@@ -54,7 +54,7 @@ public class EditNote extends ActionBarActivity {
     EditText etTitle,etDescription;
     Button btnSave,btnDelete;
 
-///////////////////////////////////////////////////////////////////
+
 
     // Debugging
     private static final String TAG = "ConnectivityPage";
